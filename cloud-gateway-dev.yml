@@ -8,6 +8,6 @@ spring:
         - id: compras-service-route
           uri: lb://msvc-compras
           predicates:
-            - Path=/api/compra/**
+            - Path=/gateway/v1/compra/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=3
