@@ -1,0 +1,6 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:7020}
+
+spring:
+  mongodb:
+    uri: mongodb://cjava:secret@localhost:27017/venta_db?authSource=admin
