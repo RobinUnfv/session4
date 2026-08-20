@@ -1,0 +1,21 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:7030}
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          - id: compras-service
+            url: lb://msvc-compras
+            predicates:
+              - Path=/api/v1/compras/**
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+    reactor.netty: DEBUG
