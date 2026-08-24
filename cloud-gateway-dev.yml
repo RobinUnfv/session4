@@ -1,6 +1,21 @@
 server:
   port: ${CUSTOM.SERVER.PORT:4040}
 
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: clientes
+              uri: lb://msvc-cliente
+              predicates:
+                - Path=/api/cliente/**
+            - id: compras
+              uri: lb://msvc-compras
+              predicates:
+                - Path=/api/compra/**
+
 logging:
   level:
     root: DEBUG
