@@ -1,5 +1,5 @@
 server:
-  port: ${CUSTOM.SERVER.PORT:7010}
+  port: ${MSVC_CLIENTE_PORT:7010}
 
 spring:
   datasource:
