@@ -1,5 +1,5 @@
 server:
-  port: ${CUSTOM.SERVER.PORT:7020}
+  port: ${MSVC_COMPRAS_PORT:7020}
 
 spring:
   mongodb:
