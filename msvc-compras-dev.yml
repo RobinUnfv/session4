@@ -4,3 +4,15 @@ server:
 spring:
   mongodb:
     uri: ${BD_MONGODB_URI}
+
+logging:
+  level:
+    root: INFO
+    com.irojas.microservices: WARN
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+  file:
+    name: logs/msvc-compras.log
+    max-size: 10MB
+    max-history: 30
