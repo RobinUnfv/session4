@@ -1,5 +1,5 @@
 server:
-  port: ${CLOUD_GATEWAY_PORT:4040}
+  port: ${PORT_SERVICE_GATEWAY}
 
 spring:
   cloud:
