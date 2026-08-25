@@ -1,11 +1,11 @@
 server:
-  port: ${MSVC_CLIENTE_PORT:7010}
+  port: ${PORT_SERVICE_CLIENTE}
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/erp_db
-    username: cjava
-    password: secret
+    url: ${BD_POSTGRESQL_URL}
+    username: ${BD_POSTGRESQL_USERNAME}
+    password: ${BD_POSTGRESQL_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
