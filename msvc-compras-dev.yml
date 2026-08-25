@@ -1,6 +1,6 @@
 server:
-  port: ${MSVC_COMPRAS_PORT:7020}
+  port: ${PORT_SERVICE_COMPRAS}
 
 spring:
   mongodb:
-    uri: mongodb://cjava:secret@localhost:27017/venta_db?authSource=admin
+    uri: ${BD_MONGODB_URI}
