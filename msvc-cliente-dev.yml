@@ -7,12 +7,3 @@ spring:
       uri: ${CONFIG_SERVER_CONF_URI}
       profile: ${CONFIG_SERVER_PROFILE}
       enabled: true
-
-  jpa:
-    hibernate:
-     ddl-auto: validate
-    show-sql: false
-    properties:
-      hibernate:
-         dialect: org.hibernate.dialect.PostgreSQLDialect
-         format_sql: true
