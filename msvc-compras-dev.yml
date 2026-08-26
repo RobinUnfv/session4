@@ -10,3 +10,10 @@ spring:
   
   mongodb:
     uri: ${BD_MONGODB_URI}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka
