@@ -10,10 +10,3 @@ spring:
   
   mongodb:
     uri: ${BD_MONGODB_URI}
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICE_URL}
