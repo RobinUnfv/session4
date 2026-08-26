@@ -7,11 +7,7 @@ spring:
       uri: http://config-server:9000
       profile: dev
       enabled: true
-
-  data:
-    mongodb:
-      uri: ${BD_MONGODB_URI}
-
+      
 eureka:
   client:
     service-url:
