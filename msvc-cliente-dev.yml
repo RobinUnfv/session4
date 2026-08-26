@@ -7,11 +7,6 @@ spring:
       uri: ${CONFIG_SERVER_CONF_URI}
       profile: ${CONFIG_SERVER_PROFILE}
       enabled: true
-  datasource:
-    url: ${BD_POSTGRESQL_URL}
-    username: ${BD_POSTGRESQL_USERNAME}
-    password: ${BD_POSTGRESQL_PASSWORD}
-    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
