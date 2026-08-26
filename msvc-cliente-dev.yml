@@ -2,6 +2,11 @@ server:
   port: ${PORT_SERVICE_CLIENTE}
 
 spring:
+  cloud:
+    config:
+      uri: ${CONFIG_SERVER_CONF_URI}
+      profile: ${CONFIG_SERVER_PROFILE}
+      enabled: true
   datasource:
     url: ${BD_POSTGRESQL_URL}
     username: ${BD_POSTGRESQL_USERNAME}
