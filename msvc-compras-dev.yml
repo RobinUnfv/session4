@@ -1,14 +1,2 @@
 server:
   port: 7020
-
-spring:
-  cloud:
-    config:
-      uri: http://config-server:9000
-      profile: dev
-      enabled: true
-      
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka
