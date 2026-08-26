@@ -1,19 +1,19 @@
-server:
-  port: ${PORT_SERVICE_COMPRAS}
-
 spring:
   cloud:
     config:
-      uri: ${CONFIG_SERVER_CONF_URI}
-      profile: ${CONFIG_SERVER_PROFILE}
+      uri: ${CONFIG_SERVER_CONF_URI:http://localhost:9000}       # ← lee la variable de entorno
+      profile: ${CONFIG_SERVER_PROFILE:dev}
       enabled: true
-  
-  mongodb:
-    uri: ${BD_MONGODB_URI}
+  data:
+    mongodb:
+      uri: ${BD_MONGODB_URI:mongodb://localhost:27017/venta_db}  # ← fallback para desarrollo local
+
+server:
+  port: ${PORT_SERVICE_COMPRAS:7020}
 
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka}  # ← lee la variable
