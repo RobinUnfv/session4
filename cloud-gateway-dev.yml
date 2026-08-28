@@ -11,6 +11,12 @@ spring:
               uri: lb://msvc-cliente
               predicates:
                 - Path=/api/cliente/**
+              filters:
+                - name: CustomFilter
+                args:
+                 headerKey: Texto1
+                 headerValue: Texto2
+
             - id: compras
               uri: lb://msvc-compras
               predicates:
