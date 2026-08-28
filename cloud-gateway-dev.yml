@@ -13,9 +13,9 @@ spring:
                 - Path=/api/cliente/**
               filters:
                 - name: CustomFilter
-                args:
-                 headerKey: Texto1
-                 headerValue: Texto2
+                  args:
+                   headerKey: Texto1
+                   headerValue: Texto2
 
             - id: compras
               uri: lb://msvc-compras
