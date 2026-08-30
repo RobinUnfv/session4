@@ -7,6 +7,13 @@ spring:
       uri: ${CONFIG_SERVER_CONF_URI}
       profile: ${CONFIG_SERVER_PROFILE}
       enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
 
 eureka:
   client:
