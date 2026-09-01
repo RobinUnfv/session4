@@ -1,5 +1,5 @@
 server:
-  port: ${PORT_CLIENT_KEYCLOAK}
+  port: ${PORT_CLIENT_KEYAK}
 
 logging:
   level:
